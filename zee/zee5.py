@@ -97,7 +97,7 @@ def api():
             else:
                 pass
         except IndexError:
-            return flask.jsonify({ "Message" : "No Quality specified", "List of Qualities":["96, 144, 240, 360, 480"], "Sample":["run python3 zee5.py 144p"] }), 200
+            return flask.jsonify({ "Message" : "No Quality specified", "List of Qualities":["96, 144, 240, 360, 480, 720, 1080"], "Sample":["run python3 zee5.py 144p"] }), 200
         except requests.exceptions.ConnectionError:
             return flask.jsonify({ "Message" : "No connection" , "Stat" : "Internet Connection is required for stream"})
         except KeyError:
